@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>装飾の画像はbackground-imageで敷く</title>
+<link rel="stylesheet" href="../common.css">
+<style>
+.hero {
+  display: grid;
+  place-items: center;
+  min-height: 240px;
+  background-image: url("../img/lighthouse.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.hero h1 {
+  margin: 0;
+  padding: 8px 16px;
+  font-size: 24px;
+  color: #fff;
+  background-color: rgb(0 0 0 / 0.5);
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>海辺の町の観光案内</h1>
+</header>
+</body>
+</html>

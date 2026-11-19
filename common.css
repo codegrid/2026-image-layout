@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: system-ui, sans-serif;
+  color: #333;
+  background: #fff;
+}
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.item p {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.item img {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>枠の大きさに合わせて画像を伸び縮みさせる</title>
+<link rel="stylesheet" href="../common.css">
+<style>
+.item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+
+/* 比較用に、元の縦横比のままの画像を並べる（デモ用） */
+.heading {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.originals {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+.originals img {
+  display: block;
+  width: auto;
+  height: 100px;
+  border: 1px solid #ccc;
+}
+</style>
+</head>
+<body>
+<p class="heading">元の画像</p>
+<ul class="originals">
+  <li><img src="../img/bottle.jpg" width="400" height="900" alt=""></li>
+  <li><img src="../img/sneaker.jpg" width="1000" height="500" alt=""></li>
+  <li><img src="../img/mug.jpg" width="600" height="600" alt=""></li>
+  <li><img src="../img/lighthouse.jpg" width="1200" height="800" alt=""></li>
+</ul>
+<p class="heading">4:3の枠に入れた画像</p>
+<ul class="items">
+  <li class="item"><img src="../img/bottle.jpg" width="400" height="900" alt="緑色のボトル"><p>ボトル（縦長）</p></li>
+  <li class="item"><img src="../img/sneaker.jpg" width="1000" height="500" alt="赤いスニーカー"><p>スニーカー（横長）</p></li>
+  <li class="item"><img src="../img/mug.jpg" width="600" height="600" alt="黄色いマグカップ"><p>マグカップ（正方形）</p></li>
+  <li class="item"><img src="../img/lighthouse.jpg" width="1200" height="800" alt="海辺の灯台"><p>灯台（横長）</p></li>
+</ul>
+</body>
+</html>

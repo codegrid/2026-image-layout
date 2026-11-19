@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>object-positionで残す位置を選ぶ</title>
+<link rel="stylesheet" href="../common.css">
+<style>
+.item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+[data-mode="custom"] .item img {
+  object-position: var(--pos, center);
+}
+</style>
+</head>
+<body data-mode="center">
+<form class="controls">
+  <label><input type="radio" name="mode" value="center" checked> 指定しない（中央）</label>
+  <label><input type="radio" name="mode" value="custom"> 画像ごとにobject-positionを指定する</label>
+</form>
+<ul class="items">
+  <li class="item"><img src="../img/lighthouse.jpg" width="1200" height="800" alt="海辺の灯台" style="--pos: right"><p>灯台（<code>--pos: right</code>）</p></li>
+  <li class="item"><img src="../img/balloon.jpg" width="600" height="900" alt="空に浮かぶ気球" style="--pos: top"><p>気球（<code>--pos: top</code>）</p></li>
+</ul>
+<script>
+document.querySelector(".controls").addEventListener("change", (event) => {
+  document.body.dataset.mode = event.target.value;
+});
+</script>
+</body>
+</html>
